@@ -1,6 +1,8 @@
-var express = require('express');
-var hbs = require('hbs'); //templateing engine
+const express = require('express');
+const hbs = require('hbs'); //templateing engine
 const fs = require('fs');
+
+const port = process.env.PORT || 3000; //if there is no env set it to 3000
 
 var app = express();
 
@@ -56,5 +58,4 @@ app.get('/about', (req, res) => {
     }); 
 });
 
-app.listen(3000);
-
+app.listen(port);
